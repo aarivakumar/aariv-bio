@@ -11,6 +11,7 @@ const timelineData = [
     year: 2027,
     milestone: false,
     items: [
+      { icon: "🌍", text: "Made a contribution to the robotics &amp; physical AI community and open-sourced it" },
       { icon: "🏆", text: "Won 2 robotics &amp; physical AI awards" },
       { icon: "🏊", text: "Won 1 swimming award" }
     ]
