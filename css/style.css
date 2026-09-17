@@ -9,8 +9,13 @@
   --card-border: #e6e6f0;
   --line: #d8d8ee;
   --shadow: 0 8px 24px rgba(30, 30, 60, 0.08);
-  --hero-grad-1: #5b5bd6;
-  --hero-grad-2: #16a37b;
+  --hero-bg-1: #0a1330;
+  --hero-bg-2: #13275c;
+  --hero-text: #f4f6fb;
+  --hero-text-muted: #b6c2de;
+  --hero-accent: #7fb2ff;
+  --hero-tag-bg: rgba(255, 255, 255, 0.08);
+  --hero-tag-border: rgba(255, 255, 255, 0.18);
   color-scheme: light dark;
 }
 
@@ -26,8 +31,6 @@
     --card-border: #2a2a3a;
     --line: #2c2c40;
     --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    --hero-grad-1: #38386e;
-    --hero-grad-2: #10553f;
   }
 }
 
@@ -58,19 +61,18 @@ a { color: inherit; }
   justify-content: center;
   text-align: center;
   padding: 4rem 1.25rem;
-  background: radial-gradient(circle at 20% 20%, var(--hero-grad-1) 0%, transparent 55%),
-              radial-gradient(circle at 80% 80%, var(--hero-grad-2) 0%, transparent 55%),
-              var(--bg);
+  background: linear-gradient(165deg, var(--hero-bg-1) 0%, var(--hero-bg-2) 100%);
+  color: var(--hero-text);
   position: relative;
 }
 
 .hero-inner { max-width: 720px; }
 
-.eyebrow {
+.hero .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--hero-text-muted);
   margin: 0 0 0.5rem;
 }
 
@@ -78,17 +80,18 @@ a { color: inherit; }
   font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 700;
   margin: 0 0 1rem;
+  color: var(--hero-text);
 }
 
-.tagline {
+.hero .tagline {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: var(--text-muted);
+  color: var(--hero-text-muted);
   max-width: 560px;
   margin: 0 auto 2rem;
 }
 
-.tagline .hl {
-  color: var(--accent);
+.hero .tagline .hl {
+  color: var(--hero-accent);
   font-weight: 600;
 }
 
@@ -101,20 +104,20 @@ a { color: inherit; }
 }
 
 .tag {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: var(--hero-tag-bg);
+  border: 1px solid var(--hero-tag-border);
+  color: var(--hero-text);
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 500;
-  box-shadow: var(--shadow);
 }
 
 .scroll-cue {
   display: inline-block;
   font-size: 1.5rem;
   text-decoration: none;
-  color: var(--text-muted);
+  color: var(--hero-text-muted);
   animation: bob 2s ease-in-out infinite;
 }
 
